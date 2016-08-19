@@ -36,7 +36,7 @@
 		<section data-background="images/45_red.jpg">
 			<section>
 				<h1>Webapps modernas</h1>
-				<h3>¿Que son, por que existen, y como se hacen?</h3>
+				<h3>¿Qué son, por qué existen, y cómo se hacen?</h3>
 				<img src="images/bee_white.png" style="border:none; width: 200px;">
 				<p>
 					<small>
@@ -50,23 +50,21 @@
 			</section>
 			<section style="text-align: left;">
 				<h1 style="display:block; text-transform:uppercase;">
-					//Todo: PARTE 1
+					// Todo: PARTE 1
 				</h1>
-				<h3>//Introducción a aplicaciones WEB</h3>
-				<h3>//Evolución de applicaciones ServerRendering a BrowserBased</h3>
-				<h3>//Ember.js vs Angular.js vs Backbone.js vs React</h3>
-				<h3>//Angular 1</h3>
-				<h3>//Demo</h3>
+				<h3>// Introducción a aplicaciones WEB</h3>
+				<h3>// Evolución de aplicaciones: ServerRendered a BrowserBased</h3>
+				<h3>// Ember.js vs Angular.js vs Backbone.js vs React</h3>
+				<h3>// Angular 1</h3>
+				<h3>// Demo</h3>
 			</section>
 			<section style="text-align: left;">
 				<h1 style="display:block; text-transform:uppercase;">
-					//Todo: PARTE 2
+					// Todo: PARTE 2
 				</h1>
-				<h3>//Componentización de las aplicaciones.</h3>
-				<h3>//Diferencias entre Angular 1 y 2</h3>
-				<h3>//Componentes en Agular 2</h3>
-				<h3>//Apertura a nuevas aplicaciones</h3>
-				<h3>//Demo</h3>
+				<h3>// Diferencias entre Angular 1 y 2</h3>
+				<h3>// Componentes en Angular 2</h3>
+				<h3>// Demo</h3>
 			</section>
 			<section>
 				<h1>Empecemos...</h1>
@@ -103,13 +101,13 @@ function presenterFactory(data) {
       <code class="hljs" data-trim contenteditable>
 function presenterFactory(data) {
 let presenter;
-presenter = new FunnyPresenter('Nacho');
+presenter = new DeviousPresenter('Nacho');
 presenter.languages[ 'python','java', 'js'];
 presenter.frameworks['angular', 'ionic'];
 presenter.age = 29;
 presenter.hobby = function () {
-// Changed it to something professional
-console.log('Old Fashioned, professionally made.');
+	// DONE: Changed it to something professional
+	console.log('Old Fashioned, professionally made');
 }
 return presenter;
 }
@@ -247,7 +245,7 @@ fs.readdir(source, function (err, files) {
 
 		<section data-background="images/IMG_7746_red.jpg">
 			<section>
-				<h1>Cual es la herramienta mas adecuada?</h1>
+				<h1>¿Cuál es la herramienta mas adecuada?</h1>
 			</section>
 			<section>
 				<img src="http://kadamwhite.github.io/talks/2012/backbone-and-underscore/images/backbone.png">
@@ -282,7 +280,7 @@ fs.readdir(source, function (err, files) {
 					<li>Aplicaciones grandes</li>
 					<li>No hay DOM</li>
 					<li>Injección de dependencias</li>
-					<li>Double-Binding</li>
+					<li>Two-way Data Binding</li>
 				<ul>
 			</section>
 			<section>
@@ -327,27 +325,50 @@ fs.readdir(source, function (err, files) {
 				<h2>¿Qué cambia?</h2>
 			</section>
 			<section>
+				<img style="max-width: 400px" src="https://raw.githubusercontent.com/remojansen/logo.ts/master/ts.png">
 				<h2>Typescript</h2>
 			</section>
 			<section>
-				<h2>¿Scopes?</h2>
-				<h3>A donde vamos, no necesitamos scopes...</h3>
-			</section>
-		</section>
-
-		<section data-background="http://67.media.tumblr.com/tumblr_lcvf36M7zC1qa54hvo1_500.gif"></section>
-
-		<section data-background="images/45_red.jpg">
-			<section>
+				<img style="max-width: 600px" src="https://qph.ec.quoracdn.net/main-qimg-d84ff3356ace830dab3009cf3430afa8?convert_to_webp=true">
 				<h2>Componentes</h2>
 			</section>
+			<section>
+				<h2>¿Scopes?</h2>
+				<h3>A donde vamos, no necesitamos scopes ...</h3>
+			</section>
+			<section data-background="http://67.media.tumblr.com/tumblr_lcvf36M7zC1qa54hvo1_500.gif"></section>
+			<section>
+				<h2>Scope en Angular 1</h2>
+				<pre>
+					<code>
+function($scope){
+	$scope.comparison = "Angular 1 vs Angular 2";
+}
+					</code>
+				</pre>
+			</section>
+			<section>
+				<h2>Scope en Angular 2? No hay.</h2>
+				<pre>
+					<code>
+constructor(){
+	this.comparison = "Angular 1 vs Angular 2";
+}
+					</code>
+				</pre>
+			</section>
+
 			<section>
 				<h2>Directivas</h2>
 			</section>
 			<section>
-				<h2>Pipes</h2>
+				<h2>Servicios</h2>
+			</section>
+			<section>
+				<h2>Observables</h2>
 			</section>
 		</section>
+
 
 		<section data-background="images/120_red.jpg">
 			<h1>Gracias!</h1>
