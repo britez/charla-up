@@ -101,6 +101,7 @@ body {
 .reveal ul {
   display: inline-block;
   text-align: left;
+  color: #eee8d5;
   margin: 0 0 0 1em; }
 
 .reveal ol {
