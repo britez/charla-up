@@ -1,0 +1,11 @@
+
+
+angular 1:
+- habria que explicar algo de data binding.
+
+angular 2:
+- Component-Based
+Angular 2 is entirely component based. Controllers and $scope are no longer used.
+ahora usamos componentes y directivas (de atributo y estructurales)
+
+- dependency injection improved
