@@ -291,8 +291,9 @@ return presenter;
 
 			<section data-background="images/45_red.jpg">
 				<section>
-				<h2>Angular 2</h2>
-			</section>
+					<h1>Angular 2</h1>
+				</section>
+
 			<section>
 				<img style="max-width: 400px" src="https://raw.githubusercontent.com/remojansen/logo.ts/master/ts.png">
 				<h2>Typescript</h2>
@@ -305,6 +306,14 @@ return presenter;
 					- annotations: asi como muchos conoceran las annotations de java, esto nos permite agregar metadata. angular 2 hace un uso intensivo de la misma.<br>
 				  - TypeScript = ES6 + Types + Annotations<br>
 				  </aside>
+			</section>
+			<section>
+				<h2>Empecemos ...</h2>
+				<pre>
+					<code>
+		<app-root>Loading...</app-root>
+					</code>
+				</pre>
 			</section>
 			<section>
 				<img style="max-width: 600px" src="https://qph.ec.quoracdn.net/main-qimg-d84ff3356ace830dab3009cf3430afa8?convert_to_webp=true">
@@ -323,7 +332,7 @@ return presenter;
 				<pre>
 					<code>
 	@Component({
-	  selector: 'tabs',
+	  selector: 'app-root',
 	  template: `
 	    <ul>
 	      <li>Tab 1</li>
@@ -374,7 +383,38 @@ constructor(){
 	    </ul>
 	  `
 	})
-	export class Tabs {	}
+	export class Tabs {
+		constructor(){
+			this.infoTabA = "Tab 1";
+			this.infoTabB = "Tab 2";
+		}
+	}
+					</code>
+				</pre>
+			</section>
+			<section>
+				<h2>Estilos</h2>
+			</section>
+			<section>
+				<pre>
+					<code>
+	@Component({
+	  selector: 'tabs',
+	  template: `
+	    <ul>
+	      <li>{{infoTabA}}</li>
+	      <li>{{infoTabA}}</li>
+	    </ul>
+	  `,
+  	styles:[` li { color: red; } `]
+	})
+
+	export class Tabs {
+		constructor(){
+			this.infoTabA = "Tab 1";
+			this.infoTabB = "Tab 2";
+		}
+	}
 					</code>
 				</pre>
 			</section>
@@ -383,10 +423,110 @@ constructor(){
 				<h2>Directivas</h2>
 			</section>
 			<section>
-				<h2>Servicios</h2>
+				<pre>
+					<code>
+	@Component({
+		selector: 'tabs',
+		template: `
+			<ul>
+				<li>{{infoTabA}}</li>
+				<li>{{infoTabA}}</li>
+			</ul>
+		`,
+		styles:[` li { color: red; } `]
+	})
+
+	export class Tabs {
+		constructor(){
+			this.infoTabA = "Tab 1";
+			this.infoTabB = "Tab 2";
+		}
+	}
+					</code>
+				</pre>
 			</section>
 			<section>
+				<h2>Directivas de Estructura</h2>
+			</section>
+			<section>
+				<pre>
+					<code>
+	<div *ngIf="errorCount > 0" class="error">
+	  {{errorCount}} errores detectados
+	</div>
+					</code>
+				</pre>
+			</section>
+
+			<section>
+				<h2>Directivas de Atributo</h2>
+			</section>
+			<section>
+				<pre>
+					<code>
+import { Directive, ElementRef, Input }
+from '@angular/core';
+@Directive({ selector: '[myHighlight]' })
+export class HighlightDirective {
+    constructor(el: ElementRef) {
+       el.nativeElement.style.backgroundColor = 'yellow';
+    }
+}
+					</code>
+				</pre>
+			</section>
+
+			<section>
+				<pre>
+					<code>
+  <p myHighlight>Highlight me!</p>
+					</code>
+				</pre>
+			</section>
+
+			<section>
 				<h2>Observables</h2>
+			</section>
+			<section>
+				<h2>CLI</h2>
+			</section>
+			<section>
+				<pre>
+					<code>
+	ng new PROJECT_NAME
+	cd PROJECT_NAME
+					</code>
+				</pre>
+			</section>
+			<section>
+				<pre>
+					<code>
+$ ll
+total 48K
+-rw-rw-r--  1 ignacio ignacio  657 ago 25 19:00 angular-cli-build.js
+-rw-rw-r--  1 ignacio ignacio  545 ago 25 19:00 angular-cli.json
+drwxrwxr-x  2 ignacio ignacio 4,0K ago 25 19:00 config
+drwxrwxr-x  2 ignacio ignacio 4,0K ago 25 19:00 e2e
+drwxrwxr-x 22 ignacio ignacio 4,0K ago 25 19:01 node_modules
+-rw-rw-r--  1 ignacio ignacio 1,2K ago 25 19:00 package.json
+drwxrwxr-x  2 ignacio ignacio 4,0K ago 25 19:00 public
+-rw-rw-r--  1 ignacio ignacio 1,2K ago 25 19:00 README.md
+drwxrwxr-x  3 ignacio ignacio 4,0K ago 25 19:00 src
+-rw-rw-r--  1 ignacio ignacio 2,5K ago 25 19:00 tslint.json
+drwxrwxr-x  4 ignacio ignacio 4,0K ago 25 19:02 typings
+-rw-rw-r--  1 ignacio ignacio  352 ago 25 19:00 typings.json
+					</code>
+				</pre>
+			</section>
+			<section>
+				<pre>
+					<code>
+	ng serve
+					</code>
+				</pre>
+			</section>
+			<section>
+				<h2>Ventajas</h2>
 			</section>
 		</section>
 
