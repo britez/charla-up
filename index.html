@@ -288,16 +288,48 @@ fs.readdir(source, function (err, files) {
 			<section>
 				<h1>Angular 2</h1>
 			</section>
-			<section>
-				<h2>¿Qué cambia?</h2>
-			</section>
+
 			<section>
 				<img style="max-width: 400px" src="https://raw.githubusercontent.com/remojansen/logo.ts/master/ts.png">
 				<h2>Typescript</h2>
+				<aside class="notes">
+				  ¿por que usamos typescript?<br>
+				  - superset de es6<br>
+				  - asi como es6, nos permite definir clases<br>
+				  - typado fuerte: nos permite encontrar en compiling time errores que pasarian a exec time<br>
+					- typado opcional: nos da las ventajas de javascript y de java<br>
+					- annotations: asi como muchos conoceran las annotations de java, esto nos permite agregar metadata. angular 2 hace un uso intensivo de la misma.<br>
+				  - TypeScript = ES6 + Types + Annotations<br>
+				  </aside>
 			</section>
 			<section>
 				<img style="max-width: 600px" src="https://qph.ec.quoracdn.net/main-qimg-d84ff3356ace830dab3009cf3430afa8?convert_to_webp=true">
 				<h2>Componentes</h2>
+				<aside class="notes">
+				  ¿por que usamos typescript?<br>
+				  - superset de es6<br>
+				  - asi como es6, nos permite definir clases<br>
+				  - typado fuerte: nos permite encontrar en compiling time errores que pasarian a exec time<br>
+					- typado opcional: nos da las ventajas de javascript y de java<br>
+					- annotations: asi como muchos conoceran las annotations de java, esto nos permite agregar metadata. angular 2 hace un uso intensivo de la misma.<br>
+				  - TypeScript = ES6 + Types + Annotations<br>
+				  </aside>
+			</section>
+			<section>
+				<pre>
+					<code>
+	@Component({
+	  selector: 'tabs',
+	  template: `
+	    <ul>
+	      <li>Tab 1</li>
+	      <li>Tab 2</li>
+	    </ul>
+	  `
+	})
+	export class Tabs {	}
+					</code>
+				</pre>
 			</section>
 			<section>
 				<h2>¿Scopes?</h2>
@@ -309,7 +341,8 @@ fs.readdir(source, function (err, files) {
 				<pre>
 					<code>
 function($scope){
-	$scope.comparison = "Angular 1 vs Angular 2";
+	$scope.infoTabA = "Tab 1";
+	$scope.infoTabB = "Tab 2";
 }
 					</code>
 				</pre>
@@ -319,8 +352,25 @@ function($scope){
 				<pre>
 					<code>
 constructor(){
-	this.comparison = "Angular 1 vs Angular 2";
+	this.infoTabA = "Tab 1";
+	this.infoTabB = "Tab 2";
 }
+					</code>
+				</pre>
+			</section>
+			<section>
+				<pre>
+					<code>
+	@Component({
+	  selector: 'tabs',
+	  template: `
+	    <ul>
+	      <li>{{infoTabA}}</li>
+	      <li>{{infoTabA}}</li>
+	    </ul>
+	  `
+	})
+	export class Tabs {	}
 					</code>
 				</pre>
 			</section>
