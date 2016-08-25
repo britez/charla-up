@@ -58,14 +58,6 @@
 				<h3>// Angular 1</h3>
 				<h3>// Demo</h3>
 			</section>
-			<section style="text-align: left;">
-				<h1 style="display:block; text-transform:uppercase;">
-					// Todo: PARTE 2
-				</h1>
-				<h3>// Diferencias entre Angular 1 y 2</h3>
-				<h3>// Componentes en Angular 2</h3>
-				<h3>// Demo</h3>
-			</section>
 			<section>
 				<h1>Empecemos...</h1>
 				<div style="text-align: center;">
@@ -95,25 +87,6 @@ function presenterFactory(data) {
 						</code>
 					</pre>
 			</section>
-			<section>
-  <h2>Hello World! (2)</h2>
-    <pre>
-      <code class="hljs" data-trim contenteditable>
-function presenterFactory(data) {
-let presenter;
-presenter = new DeviousPresenter('Nacho');
-presenter.languages[ 'python','java', 'js'];
-presenter.frameworks['angular', 'ionic'];
-presenter.age = 29;
-presenter.hobby = function () {
-	// DONE: Changed it to something professional
-	console.log('Old Fashioned, professionally made');
-}
-return presenter;
-}
-      </code>
-    </pre>
-</section>
 		</section>
 
 		<section data-background="images/38_white.jpg" class="white">
@@ -127,9 +100,14 @@ return presenter;
 					<li>Petición de páginas</li>
 					<li>Carga inicial</li>
 					<li>Caché</li>
-					<li>Bandwidth</li>
 					<li>Single endpoint</li>
 				</ul>
+				<aside class="notes">
+					Petición de páginas: es lo que creo http y html.<br>
+					Carga inicial: cargar una aplicacion js es pedir un archivo y mas y mas y mas<br>
+					Caché: si tu aplicacion solo devuelve json json es todo lo que podes cachear. no podes cachear templates<br>
+					Single endpoint: hablas con una sola api y listo. nada de muchos endpoints<br>
+				</aside>
 			</section>
 			<section>
 				<h1>Pero... ¿Que pasaría si quisiera...?</h1>
@@ -178,13 +156,13 @@ function loadDoc() {
   var xhttp = new XMLHttpRequest();
   //Some kind of openning connection -- Really?
   xhttp.open("GET", "ajax_info.txt", true);
-  //Send, ok...
-  xhttp.send();
   //Handle the result -- Just kill me
   xhttp.onreadystatechange = function() {
   if (xhttp.readyState == 4 && xhttp.status == 200) {
     document.getElementById("demo").innerHTML = xhttp.responseText;
   }
+  //Send, ok...
+  xhttp.send();
 }
 					</code>
 				</pre>
@@ -289,7 +267,33 @@ fs.readdir(source, function (err, files) {
 		<section data-background="images/45_red.jpg">
 			<section>
 				<h1>Angular 2</h1>
+				<section style="text-align: left;">
+				<h1 style="display:block; text-transform:uppercase;">
+					// Todo: PARTE 2
+				</h1>
+				<h3>// Diferencias entre Angular 1 y 2</h3>
+				<h3>// Componentes en Angular 2</h3>
 			</section>
+			</section>
+			<section>
+  <h2>Hello World! (2)</h2>
+    <pre>
+      <code class="hljs" data-trim contenteditable>
+function presenterFactory(data) {
+let presenter;
+presenter = new DeviousPresenter('Nacho');
+presenter.languages[ 'python','java', 'js'];
+presenter.frameworks['angular', 'ionic'];
+presenter.age = 29;
+presenter.hobby = function () {
+	// DONE: Changed it to something professional
+	console.log('Old Fashioned, professionally made');
+}
+return presenter;
+}
+      </code>
+    </pre>
+</section>
 			<section>
 				<h2>¿Qué cambia?</h2>
 			</section>
