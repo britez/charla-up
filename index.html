@@ -292,6 +292,11 @@ return presenter;
 			<section data-background="images/45_red.jpg">
 				<section>
 					<h1>Angular 2</h1>
+					<aside class="notes">
+					  nuevos paradigmas<br>
+					  no es compatible con ng1<br>
+
+					  </aside>
 				</section>
 
 			<section>
@@ -358,6 +363,17 @@ return presenter;
 				</pre>
 			</section>
 			<section>
+				<h2>Import</h2>
+				<aside class="notes">
+
+				  </aside>
+					<pre>
+						<code>
+import { OtherCmp } from './components/other.cmpt';
+						</code>
+					</pre>
+			</section>
+			<section>
 				<pre>
 					<code>
 	@Component({
@@ -366,8 +382,10 @@ return presenter;
 	    <div>
 	      <other-cmp></other-cmp>
 	    </div>
-	  `
+	  `,
+    directives: [ OtherCmp ]
 	})
+	
 	export class AppRoot {	}
 					</code>
 				</pre>
@@ -514,6 +532,12 @@ export class HighlightDirective {
 
 			<section>
 				<h2>Observables</h2>
+				<aside class="notes">
+callbacks: es una funcion q le paso a otra funcion<br>
+promise: es un objeto que me devuelven, y cuando se resuelve ejecuto algo<br>
+observable: puedo observar un cambio y otro, haciendo un subscribe<br>
+cuando se usa esto? http methods, comunicacion entre componentes.
+				  </aside>
 			</section>
 			<section>
 				<h2>CLI</h2>
@@ -555,6 +579,11 @@ drwxrwxr-x  4 ignacio ignacio 4,0K ago 25 19:02 typings
 			</section>
 			<section>
 				<h2>Ventajas</h2>
+				<aside class="notes">
+esta a la vanguardia: nuevos paradigmas, nuevas tecnologias<br>
+esto tambien es malo.<br>
+ejemplo de cuando lo usamos y cuando no
+				  </aside>
 			</section>
 		</section>
 
