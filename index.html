@@ -271,23 +271,15 @@ fs.readdir(source, function (err, files) {
 		<section data-background="http://i.imgur.com/dImyJ.gif"></section>
 
 		<section data-background="images/45_red.jpg">
-			<section>
-				<h1>Angular 2</h1>
-				<section style="text-align: left;">
-				<h1 style="display:block; text-transform:uppercase;">
-					// Todo: PARTE 2
-				</h1>
-				<h3>// Diferencias entre Angular 1 y 2</h3>
-				<h3>// Componentes en Angular 2</h3>
-			</section>
-			</section>
+
+
 			<section>
   <h2>Hello World! (2)</h2>
     <pre>
       <code class="hljs" data-trim contenteditable>
 function presenterFactory(data) {
 let presenter;
-presenter = new DeviousPresenter('Nacho');
+presenter = new NotAsFunnyPresenter('Nacho');
 presenter.languages[ 'python','java', 'js'];
 presenter.frameworks['angular', 'ionic'];
 presenter.age = 29;
@@ -300,16 +292,53 @@ return presenter;
       </code>
     </pre>
 </section>
-			<section>
-				<h2>¿Qué cambia?</h2>
+</section>
+
+			<section data-background="images/45_red.jpg">
+				<section>
+				<h2>Angular 2</h2>
 			</section>
 			<section>
 				<img style="max-width: 400px" src="https://raw.githubusercontent.com/remojansen/logo.ts/master/ts.png">
 				<h2>Typescript</h2>
+				<aside class="notes">
+				  ¿por que usamos typescript?<br>
+				  - superset de es6<br>
+				  - asi como es6, nos permite definir clases<br>
+				  - typado fuerte: nos permite encontrar en compiling time errores que pasarian a exec time<br>
+					- typado opcional: nos da las ventajas de javascript y de java<br>
+					- annotations: asi como muchos conoceran las annotations de java, esto nos permite agregar metadata. angular 2 hace un uso intensivo de la misma.<br>
+				  - TypeScript = ES6 + Types + Annotations<br>
+				  </aside>
 			</section>
 			<section>
 				<img style="max-width: 600px" src="https://qph.ec.quoracdn.net/main-qimg-d84ff3356ace830dab3009cf3430afa8?convert_to_webp=true">
 				<h2>Componentes</h2>
+				<aside class="notes">
+				  ¿por que usamos typescript?<br>
+				  - superset de es6<br>
+				  - asi como es6, nos permite definir clases<br>
+				  - typado fuerte: nos permite encontrar en compiling time errores que pasarian a exec time<br>
+					- typado opcional: nos da las ventajas de javascript y de java<br>
+					- annotations: asi como muchos conoceran las annotations de java, esto nos permite agregar metadata. angular 2 hace un uso intensivo de la misma.<br>
+				  - TypeScript = ES6 + Types + Annotations<br>
+				  </aside>
+			</section>
+			<section>
+				<pre>
+					<code>
+	@Component({
+	  selector: 'tabs',
+	  template: `
+	    <ul>
+	      <li>Tab 1</li>
+	      <li>Tab 2</li>
+	    </ul>
+	  `
+	})
+	export class Tabs {	}
+					</code>
+				</pre>
 			</section>
 			<section>
 				<h2>¿Scopes?</h2>
@@ -321,7 +350,8 @@ return presenter;
 				<pre>
 					<code>
 function($scope){
-	$scope.comparison = "Angular 1 vs Angular 2";
+	$scope.infoTabA = "Tab 1";
+	$scope.infoTabB = "Tab 2";
 }
 					</code>
 				</pre>
@@ -331,8 +361,25 @@ function($scope){
 				<pre>
 					<code>
 constructor(){
-	this.comparison = "Angular 1 vs Angular 2";
+	this.infoTabA = "Tab 1";
+	this.infoTabB = "Tab 2";
 }
+					</code>
+				</pre>
+			</section>
+			<section>
+				<pre>
+					<code>
+	@Component({
+	  selector: 'tabs',
+	  template: `
+	    <ul>
+	      <li>{{infoTabA}}</li>
+	      <li>{{infoTabA}}</li>
+	    </ul>
+	  `
+	})
+	export class Tabs {	}
 					</code>
 				</pre>
 			</section>
