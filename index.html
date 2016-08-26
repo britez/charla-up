@@ -296,8 +296,14 @@ return presenter;
 
 			<section data-background="images/45_red.jpg">
 				<section>
-				<h2>Angular 2</h2>
-			</section>
+					<h1>Angular 2</h1>
+					<aside class="notes">
+					  nuevos paradigmas<br>
+					  no es compatible con ng1<br>
+
+					  </aside>
+				</section>
+
 			<section>
 				<img style="max-width: 400px" src="https://raw.githubusercontent.com/remojansen/logo.ts/master/ts.png">
 				<h2>Typescript</h2>
@@ -312,23 +318,25 @@ return presenter;
 				  </aside>
 			</section>
 			<section>
+				<h2>Empecemos ...</h2>
+				<pre>
+					<code>
+		<app-root>Loading...</app-root>
+					</code>
+				</pre>
+			</section>
+			<section>
 				<img style="max-width: 600px" src="https://qph.ec.quoracdn.net/main-qimg-d84ff3356ace830dab3009cf3430afa8?convert_to_webp=true">
 				<h2>Componentes</h2>
 				<aside class="notes">
-				  ¿por que usamos typescript?<br>
-				  - superset de es6<br>
-				  - asi como es6, nos permite definir clases<br>
-				  - typado fuerte: nos permite encontrar en compiling time errores que pasarian a exec time<br>
-					- typado opcional: nos da las ventajas de javascript y de java<br>
-					- annotations: asi como muchos conoceran las annotations de java, esto nos permite agregar metadata. angular 2 hace un uso intensivo de la misma.<br>
-				  - TypeScript = ES6 + Types + Annotations<br>
+
 				  </aside>
 			</section>
 			<section>
 				<pre>
 					<code>
 	@Component({
-	  selector: 'tabs',
+	  selector: 'app-root',
 	  template: `
 	    <ul>
 	      <li>Tab 1</li>
@@ -336,7 +344,54 @@ return presenter;
 	    </ul>
 	  `
 	})
-	export class Tabs {	}
+	export class AppRoot {	}
+					</code>
+				</pre>
+			</section>
+			<section>
+				<h2>Más Componentes</h2>
+				<aside class="notes">
+
+				  </aside>
+			</section>
+			<section>
+				<pre>
+					<code>
+	@Component({
+	  selector: 'other-cmp',
+	  template: `
+	    <p>Soy otro componente!</p>
+	  `
+	})
+	export class OtherCmp {	}
+					</code>
+				</pre>
+			</section>
+			<section>
+				<h2>Import</h2>
+				<aside class="notes">
+
+				  </aside>
+					<pre>
+						<code>
+import { OtherCmp } from './components/other.cmpt';
+						</code>
+					</pre>
+			</section>
+			<section>
+				<pre>
+					<code>
+	@Component({
+	  selector: 'app-root',
+	  template: `
+	    <div>
+	      <other-cmp></other-cmp>
+	    </div>
+	  `,
+    directives: [ OtherCmp ]
+	})
+
+	export class AppRoot {	}
 					</code>
 				</pre>
 			</section>
@@ -379,7 +434,38 @@ constructor(){
 	    </ul>
 	  `
 	})
-	export class Tabs {	}
+	export class Tabs {
+		constructor(){
+			this.infoTabA = "Tab 1";
+			this.infoTabB = "Tab 2";
+		}
+	}
+					</code>
+				</pre>
+			</section>
+			<section>
+				<h2>Estilos</h2>
+			</section>
+			<section>
+				<pre>
+					<code>
+	@Component({
+	  selector: 'tabs',
+	  template: `
+	    <ul>
+	      <li>{{infoTabA}}</li>
+	      <li>{{infoTabA}}</li>
+	    </ul>
+	  `,
+  	styles:[` li { color: red; } `]
+	})
+
+	export class Tabs {
+		constructor(){
+			this.infoTabA = "Tab 1";
+			this.infoTabB = "Tab 2";
+		}
+	}
 					</code>
 				</pre>
 			</section>
@@ -388,10 +474,128 @@ constructor(){
 				<h2>Directivas</h2>
 			</section>
 			<section>
-				<h2>Servicios</h2>
+				<pre>
+					<code>
+	@Component({
+		selector: 'tabs',
+		template: `
+			<ul>
+				<li>{{infoTabA}}</li>
+				<li>{{infoTabA}}</li>
+			</ul>
+		`,
+		styles:[` li { color: red; } `]
+	})
+
+	export class Tabs {
+		constructor(){
+			this.infoTabA = "Tab 1";
+			this.infoTabB = "Tab 2";
+		}
+	}
+					</code>
+				</pre>
 			</section>
 			<section>
+				<h2>Directivas de Estructura</h2>
+			</section>
+			<section>
+				<pre>
+					<code>
+	<div *ngIf="errorCount > 0" class="error">
+	  {{errorCount}} errores detectados
+	</div>
+					</code>
+				</pre>
+			</section>
+
+			<section>
+				<h2>Directivas de Atributo</h2>
+			</section>
+			<section>
+				<pre>
+					<code>
+import { Directive, ElementRef, Input }
+from '@angular/core';
+@Directive({ selector: '[myHighlight]' })
+export class HighlightDirective {
+    constructor(el: ElementRef) {
+       el.nativeElement.style.backgroundColor = 'yellow';
+    }
+}
+					</code>
+				</pre>
+			</section>
+
+			<section>
+				<pre>
+					<code>
+  <p myHighlight>Highlight me!</p>
+					</code>
+				</pre>
+			</section>
+
+			<section>
 				<h2>Observables</h2>
+				<aside class="notes">
+callbacks: es una funcion q le paso a otra funcion<br>
+promise: es un objeto que me devuelven, y cuando se resuelve ejecuto algo<br>
+observable: puedo observar un cambio y otro, haciendo un subscribe<br>
+cuando se usa esto? http methods, comunicacion entre componentes.
+				  </aside>
+			</section>
+			<section>
+				<h2>CLI</h2>
+			</section>
+			<section>
+				<pre>
+					<code>
+	ng new PROJECT_NAME
+	cd PROJECT_NAME
+					</code>
+				</pre>
+			</section>
+			<section>
+				<pre>
+					<code>
+$ ll
+total 48K
+-rw-rw-r--  1 ignacio ignacio  657 ago 25 19:00 angular-cli-build.js
+-rw-rw-r--  1 ignacio ignacio  545 ago 25 19:00 angular-cli.json
+drwxrwxr-x  2 ignacio ignacio 4,0K ago 25 19:00 config
+drwxrwxr-x  2 ignacio ignacio 4,0K ago 25 19:00 e2e
+drwxrwxr-x 22 ignacio ignacio 4,0K ago 25 19:01 node_modules
+-rw-rw-r--  1 ignacio ignacio 1,2K ago 25 19:00 package.json
+drwxrwxr-x  2 ignacio ignacio 4,0K ago 25 19:00 public
+-rw-rw-r--  1 ignacio ignacio 1,2K ago 25 19:00 README.md
+drwxrwxr-x  3 ignacio ignacio 4,0K ago 25 19:00 src
+-rw-rw-r--  1 ignacio ignacio 2,5K ago 25 19:00 tslint.json
+drwxrwxr-x  4 ignacio ignacio 4,0K ago 25 19:02 typings
+-rw-rw-r--  1 ignacio ignacio  352 ago 25 19:00 typings.json
+					</code>
+				</pre>
+			</section>
+			<section>
+				<pre>
+					<code>
+	ng serve
+					</code>
+				</pre>
+			</section>
+			<section>
+				<h2>Ventajas</h2>
+				<aside class="notes">
+esta a la vanguardia: nuevos paradigmas, nuevas tecnologias<br>
+esto tambien es malo.<br>
+ejemplo de cuando lo usamos y cuando no
+				  </aside>
+			</section>
+			<section>
+				<h2>+ Info</h2>
+				<aside class="notes">
+twitter<br>
+github, van a ver que mi codigo no es lo mas prolijo del mundo, si yo puedo hacer una app en ng2, cualquiera puede<br>
+					</aside>
 			</section>
 		</section>
 
