@@ -6,7 +6,7 @@
 
 	<title>Creación de Aplicaciones Web Modernas</title>
 
-	<meta name="description" content="Presentación sobre Angular1 y Angular2.">
+	<meta name="description" content="Presentación sobre Angular2.">
 	<meta name="author" content="Maximiliano Britez">
 
 	<meta name="apple-mobile-web-app-capable" content="yes">
@@ -40,52 +40,36 @@
 				<img src="images/bee_white.png" style="border:none; width: 200px;">
 				<p>
 					<small>
-						Maxi Britez / <a href="http://twitter.com/mapsi88">@mapsi88</a> / maxi.britez@redb.ee
+						Maxi Britez / <a href="http://twitter.com/mapsi88">@mapsi88</a> / matsi@redb.ee
 					</small>
 					<br>
 					<small>
 						Ignacio Mieites / <a href="http://twitter.com/imieites">@imieites</a> / ignacio.mieites@redb.ee
 					</small>
+					<br>
+					<small>
+						Matias Gonzalez / <a href="http://twitter.com/matitanio">@matitanio</a> / mati@redb.ee
+					</small>
+					<br>
+					<small>
+						Ezequiel Apfel / <a href="http://twitter.com/eapfel">@eapfel</a> / ezequiel@redb.ee
+					</small>
 				</p>
 			</section>
 			<section style="text-align: left;">
 				<h1 style="display:block; text-transform:uppercase;">
-					// Todo: PARTE 1
+					// Todo:
 				</h1>
 				<h3>// Introducción a aplicaciones WEB</h3>
 				<h3>// Evolución de aplicaciones: ServerRendered a BrowserBased</h3>
 				<h3>// Ember.js vs Angular.js vs Backbone.js vs React</h3>
-				<h3>// Angular 1</h3>
-				<h3>// Demo</h3>
+				<h3>// Angular2</h3>
 			</section>
 			<section>
 				<h1>Empecemos...</h1>
 				<div style="text-align: center;">
 					<img src="http://67.media.tumblr.com/33e608b98ea31c47053f53d841af8aac/tumblr_nqu0qmgNZt1tlb56zo1_400.gif" style="width: 50%;"/>
 				</div>
-			</section>
-		</section>
-
-		<!-- Presentación -->
-		<section data-background="images/IMG_7746_red.jpg">
-			<section>
-				<h2>Hello World!</h2>
-					<pre>
-						<code class="hljs" data-trim contenteditable>
-function presenterFactory(data) {
- let presenter;
- presenter = new FunnyPresenter('Matsi');
- presenter.languages['java', 'js', 'groovy'];
- presenter.frameworks['spring', 'angular', 'backbone'];
- presenter.age = 28;
- presenter.hobby = function () {
- 	//TODO: Change this with something professional
- 	console.log('mojito!');
- }
- return presenter;
-}
-						</code>
-					</pre>
 			</section>
 		</section>
 
@@ -233,15 +217,18 @@ fs.readdir(source, function (err, files) {
 			</section>
 			<section>
 				<h3>Angular</h3>
-				<ul>
-					<li>Aplicaciones grandes</li>
-					<li>Routing de la aplicación</li>
-					<li>Injección de dependencias</li>
-					<li>Two-way Data Binding</li>
-					<li>Promises, ejecución asíncrona</li>
-					<li>Componentes reutilizables, directivas</li>
-					<li>Comunicación entre componentes via eventos</li>
-				<ul>
+				<img src="https://angular.io/resources/images/devguide/architecture/overview2.png">
+				<aside class="notes">
+					<ul>
+						<li>Aplicaciones grandes</li>
+						<li>Routing de la aplicación</li>
+						<li>Injección de dependencias</li>
+						<li>Two-way Data Binding</li>
+						<li>Promises, ejecución asíncrona</li>
+						<li>Componentes reutilizables, directivas</li>
+						<li>Comunicación entre componentes via eventos</li>
+					<ul>
+				</aside>
 			</section>
 			<section>
 				<h1>¿Por qué debería usar Angular?</h1>
@@ -251,72 +238,136 @@ fs.readdir(source, function (err, files) {
 		</section>
 
 		<section data-background="images/45_red.jpg">
+			<section><h2>Angular 2</h2></section>
+			<section data-background="http://i.imgur.com/uPp4R86.gif?noredirect	"></section>
 			<section>
-				<h1>Angular 1</h1>
+				<h1>Muy tarde...</h1>
+				<ul>
+					<li>Muchos release candidates</li>
+					<li>Es un freamework completamente distinto</li>
+					<li>Muy grande, si solo quiero hacer algo sencillo</li>
+					<li>La comunidad se fue a lo minimalista de react o vue</li>
+					<li>Muchos problemas de diseño y retrabajo</li>
+				</ul>
 			</section>
-			<section>
-				<h2>Vistas</h2>
-			</section>
-			<section>
-				<h2>Controllers</h2>
-			</section>
-			<section>
-				<h2>Servicios</h2>
-			</section>
-			<section>
-				<h2>Directivas</h2>
-			</section>
+			<section data-background="http://i1.kym-cdn.com/photos/images/original/000/825/595/454.gif"></section>
+		</section>
+	</section>
+
+	<section data-background="images/45_red.jpg">
+		<section><h2>Lo nuevo en Angular 2</h2></section>
+		<section>
+			<img style="max-width: 400px" src="https://raw.githubusercontent.com/remojansen/logo.ts/master/ts.png">
+			<h2>Typescript</h2>
 		</section>
 
-		<section data-background="http://i.imgur.com/dImyJ.gif"></section>
+		<section>
+			<h2>Componentes</h2>
+			<img src="images/componentes.png">
+		</section>
 
-		<section data-background="images/45_red.jpg">
+		<section>
+			<h2>Scoped styles</h2>
+			<img src="https://i.ytimg.com/vi/j6wFcpGF1OA/maxresdefault.jpg">
+		</section>
 
+		<section>
+			<h2>Servicios</h2>
+			<pre>
+				<code>
+@Injectable()
+export class GithubFetchService {
+  baseUrl:string = 'https://api.github.com/search/users?q=';
 
-			<section>
-  <h2>Hello World! (2)</h2>
-    <pre>
-      <code class="hljs" data-trim contenteditable>
-function presenterFactory(data) {
-let presenter;
-presenter = new NotAsFunnyPresenter('Nacho');
-presenter.languages[ 'python','java', 'js'];
-presenter.frameworks['angular', 'ionic'];
-presenter.age = 29;
-presenter.hobby = function () {
-	// DONE: Changed it to something professional
-	console.log('Old Fashioned, professionally made');
+  constructor(private http: Http) { }
+
+  getUserList(nameQuery:string){
+    return this.http.get(this.baseUrl+nameQuery);
+  }
+
 }
-return presenter;
+				</code>
+			</pre>
+		</section>
+
+
+		<section>
+			<h2>Observables</h2>
+			<pre>
+				<code>
+@Component{
+  selector: 'app-gf-detail',
+  templateUrl: './gf-detail.component.html',
+  styleUrls: ['./gf-detail.component.css']
+})
+export class GfDetailComponent implements OnInit {
+  user: any;
+
+  getUser(name:string){
+    this.gfService.getUser(name).subscribe(res => {
+      this.user = res.json();
+      console.log(this.user);
+    });
+  }
 }
-      </code>
-    </pre>
-</section>
-</section>
+				</code>
+			</pre>
+		</section>
 
-			<section data-background="images/45_red.jpg">
-				<section>
-					<h1>Angular 2</h1>
-					<aside class="notes">
-					  nuevos paradigmas<br>
-					  no es compatible con ng1<br>
+		<section>
+			<h2>Directivas</h2>
+			<pre>
+				<code>
+<div *ngIf="!loading">
+  <div *ngIf="usersList.length > 0">
+    <ul class="list-group">
+      <li *ngFor="let user of usersList" class="list-group-item">
+        <span class="badge"><span class="glyphicon glyphicon-star"></span></span>
+        <b><a routerLink="/user/{{user.login}}">{{user.login}}</a></b> (<a href="{{user.html_url}}">{{user.html_url}}</a>)
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="usersList.length < 1">
+    <div class="well">No hay usuarios para mostrar.</div>
+  </div>
+</div>
+				</code>
+			</pre>
+		</section>
 
-					  </aside>
-				</section>
+		<section>
+			<h2>Routing</h2>
+			<pre>
+				<code>@NgModule({
+  declarations: [ ... , ],
+  imports: [
+    ... ,
+    RouterModule.forRoot([
+      { path: 'user/:userName', component: GfDetailComponent },
+      { path: '', component: GfMainComponent },
+      { path: '**', component: GfMainComponent }
+    ])
+  ]
+  bootstrap: [AppComponent]
+})
+				</code>
+			</pre>
+		</section>
 
-			<section>
-				<img style="max-width: 400px" src="https://raw.githubusercontent.com/remojansen/logo.ts/master/ts.png">
-				<h2>Typescript</h2>
-				<aside class="notes">
-				  ¿por que usamos typescript?<br>
-				  - superset de es6<br>
-				  - asi como es6, nos permite definir clases<br>
-				  - typado fuerte: nos permite encontrar en compiling time errores que pasarian a exec time<br>
-					- typado opcional: nos da las ventajas de javascript y de java<br>
-					- annotations: asi como muchos conoceran las annotations de java, esto nos permite agregar metadata. angular 2 hace un uso intensivo de la misma.<br>
-				  - TypeScript = ES6 + Types + Annotations<br>
-				  </aside>
-			</section>
+		<section>
+			<h2>Angular cli</h2>
+			<img style="width:900px" src="images/cli-logo.svg">
+		</section>
+
+		<section>
+			<h2>Y mucho mas...</h2>
+		</section>
+	</section>
+
+		<section data-background="images/59_white.jpg" class="white">
+		<h1>Demo</h1>
+	</section>
+<!--
 			<section>
 				<h2>Empecemos ...</h2>
 				<pre>
@@ -604,6 +655,7 @@ github, van a ver que mi codigo no es lo mas prolijo del mundo, si yo puedo hace
 			<h1>Gracias!</h1>
 			<img src="images/bee_white.png" style="border:none; width: 200px;">
 		</section>
+	-->
 	</div>
 
 </div>
@@ -615,7 +667,7 @@ github, van a ver que mi codigo no es lo mas prolijo del mundo, si yo puedo hace
 
 	// More info https://github.com/hakimel/reveal.js#configuration
 	Reveal.initialize({
-		controls: false,
+		controls: true,
 		progress: true,
 		history: true,
 		center: true,
